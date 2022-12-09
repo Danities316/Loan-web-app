@@ -1,0 +1,26 @@
+About Project	       		Project Details
+Project Name :	    		Loan Management System Project in Node JS
+Project Platform :			NodeJS Framework
+Programming Language Used:	NodeJS Language
+Project Type :	Web Application
+Database:	MySQL
+
+About Loan Management System Node JS Project
+The Loan Management System Project in Node JS express 
+framework and a SQL database were used to create this app. 
+I utilized html CSS and bootstrap in the frontend. 
+This software can assist in keeping track of customers who have taken out a loan. 
+Admin can grant a loan to a consumer by enrolling his details. 
+Schemes can be added to the system by the administrator.
+
+				Features
+
+1. Customer must provide his name, address, phone number, image, and asset (what he needs to get the loan) as well as the value of his asset.
+2. He can take the loan if his asset is good.
+3. After that, the system will generate payment dates for the customer and print a pdf for them to keep.
+4. Customers must pay their payments on time, and if they do not, they must pay a fine. If he misses a payment by a month, he must pay a fine of 2% of his installment amount.
+5. Admin has access to all customer and loan information.
+6. Administrator has the ability to edit and delete data.
+7. Admin can look up a customer’s ID and view their history.
+8. Admin can grant a loan to a consumer by enrolling his details.
+9. Schemes can be added to the system by the administrator.
