@@ -7,3 +7,5 @@ var connection = mysql.createConnection({
     password: dbConfig.PASSWORD,
     database: dbConfig.DB
 })
+
+module.exports = connection;

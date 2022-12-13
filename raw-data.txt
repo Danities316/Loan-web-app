@@ -5,6 +5,10 @@ Programming Language Used:	NodeJS Language
 Project Type :	Web Application
 Database:	MySQL
 
+api link: https://dash.okra.ng/
+Public sandbox API key: e5c14fa2-7f3e-5b59-8d9c-5795cf144523
+Secret key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mzk3MTMzYzgzOGVmZDBkNmMwYTBhM2YiLCJpYXQiOjE2NzA4NDUyNDR9.klaLZK2Um2sWoXTDKRl3j0vghrJPOSMU2XzB7Ksu8HI
+
 About Loan Management System Node JS Project
 The Loan Management System Project in Node JS express 
 framework and a SQL database were used to create this app. 
