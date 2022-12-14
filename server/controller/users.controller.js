@@ -1,6 +1,6 @@
 const connection = require('../../database/connection')
 const ejs = require('ejs');
-const momment =  require('moment');
+const moment =  require('moment');
 
 
 exports.register = async (req, res) => {
@@ -10,7 +10,7 @@ exports.register = async (req, res) => {
         "legalname": req.body.name,
         "email": req.body.email,
         "password": req.body.password,
-        "cPassword":req.bod.confirm_password,
+        "cPassword":req.body.confirm_password,
         time
     }
     try {
