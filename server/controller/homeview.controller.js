@@ -1,3 +1,3 @@
 exports.homePage = (req, res, next) => {
-    res.render('home.ejs');
+    res.render('landingpage.ejs');
 }

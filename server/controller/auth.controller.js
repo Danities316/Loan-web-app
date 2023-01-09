@@ -39,6 +39,12 @@ exports.Createlogin = async (req,res) => {
 };
 
 
+exports.registerForm = async (req, res) => {
+    res.render('register.ejs')
+    // console.log("hello")
+}
+
 exports.getLogin = async (req, res) => {
+    res.send("This is the login pagw")
     console.log('hi');
 };
