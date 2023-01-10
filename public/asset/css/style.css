@@ -112,6 +112,17 @@ h6 {
   visibility: visible;
   opacity: 1;
 }
+.btn {
+ background-color: #149f6e;
+ border-radius: 0;
+ border-width: 4px;
+
+}
+.btn:hover {
+  background-color: #011a11;
+  color:  #149f6e;;
+  border: 2px solid #000000;
+}
 
 /*--------------------------------------------------------------
 # Disable AOS delay on mobile
