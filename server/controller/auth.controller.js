@@ -1,6 +1,9 @@
-const connection = require('../../database/connection')
+const db = require('../model');
+const sequelize = require('../../database/connection');
+const { Op, Sequelize } = require("sequelize");
 const ejs = require('ejs');
-
+const dateFormat = require('dateformat');
+const user = db.user;
 
 
 exports.Createlogin = async (req,res) => {
@@ -48,3 +51,44 @@ exports.getLogin = async (req, res) => {
     res.send("This is the login pagw")
     console.log('hi');
 };
+
+
+exports.createRegister = async (req, res) => {
+    // const time = dateFormat(new Date(), "dddd, mmmm dS, yyyy, h:MM:ss TT");
+    const time = dateFormat();
+    const email = req.body.email;
+    const username = req.body.username;
+
+    const data = {
+         "firstName": req.body.firstName,
+         "lastName": req.body.lastName,
+         "email":  req.body.email,
+         "username" : req.body.username,
+         "phone": req.body.phone,
+         "dob": req.body.date_of_birth,
+         "password": req.body.password,
+         time
+    };
+
+    try {
+        const checkIfUserExist = await user.findAll({where : { [Op.or]:[
+            {email},
+            {username}
+        ] }});
+        // console.log(checkIfUserExist)
+        if(checkIfUserExist.length === 0){
+            let result = await user.create(data)
+            // console.log(result)
+            return res.redirect("/login")
+   
+        }else{
+            let msg = "email or username already exist"
+            // console.log(msg)
+            res.redirect('/notifi/' + msg)
+        }
+    } catch (error) {
+        
+    }
+   
+
+}

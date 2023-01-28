@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const db = require('./server/model');
 const path = require('path');
 const session = require('express-session');
 const bodyParser = require('body-parser');
@@ -12,6 +13,20 @@ const register = require('./server/routes/users.route');
 const getRegister = require('./server/routes/users.route');
 const homePage = require('./server/routes/home.route');
 const expressEjsLayouts = require('express-ejs-layouts');
+const { Sequelize } = require('sequelize');
+const connect = require('./database/config')
+require('dotenv').config();
+
+// const sequelize = new Sequelize(connect);
+// (async () => {
+//     try {
+//         await sequelize.authenticate();
+//         console.log('Connection has been established successfully.');
+//       } catch (error) {
+//         console.error('Unable to connect to the database:', error);
+//       }
+//   })();
+
 
 
 const options = {
@@ -20,6 +35,9 @@ const options = {
     saveUninitialized: true
 }
 app.use(session(options));
+
+// not needed in prod
+db.sequelize.sync();
 
 // set up routing and view 
 app.set('view engine', 'ejs');
